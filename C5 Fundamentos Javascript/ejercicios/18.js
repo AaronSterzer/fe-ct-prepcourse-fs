@@ -8,6 +8,19 @@ function esVocal(letra) {
   // "n" ---> "Dato incorrecto"
   // "texto largo" ---> "Dato incorrecto"
   // Tu código:
-}
+    if (letra.length === 1) {
+      // Comprueba si la letra es una vocal
+      letra = letra.toLowerCase() // tolowercase sirve para que aeiou en mayus o minus sea indiferente.
+      if ("aeiou".includes(letra)) {
+        return "Es vocal";
+      } else {
+        return "Dato incorrecto";
+      }
+    } else {
+      return "Dato incorrecto";
+    }
+  }
+
+
 
 module.exports = esVocal;
